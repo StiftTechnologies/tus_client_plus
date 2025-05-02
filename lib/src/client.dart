@@ -18,8 +18,9 @@ class TusClient extends TusClientBase {
     super.retries = 0,
     super.retryScale = RetryScale.constant,
     super.retryInterval = 0,
+    required String fingerprint,
   }) {
-    _fingerprint = generateFingerprint() ?? "";
+    _fingerprint = fingerprint;
   }
 
   /// Override this method to use a custom Client
