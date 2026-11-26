@@ -22,8 +22,10 @@ class MockTusClient extends TusClient {
           file,
           store: store,
           maxChunkSize: maxChunkSize,
+          fingerprint: file.path,
         ) {
     httpClient = MockClient();
+    setUploadData(url, headers, metadata);
   }
 
   http.Client getHttpClient() => httpClient as http.Client;
