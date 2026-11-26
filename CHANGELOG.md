@@ -1,3 +1,11 @@
+## [2.0.0] - Remove the upload speed test
+
+This entry uses the tus_client_plus version from pubspec.yaml (1.0.0 before this change). The entries below come from the upstream tus_client_dart package and keep its numbering.
+
+- BREAKING: removed `measureUploadSpeed` from `upload()`, the `uploadSpeed` and `bestServers` fields, and the `setUploadTestServers()` and `uploadSpeedTest()` methods.
+- BREAKING: `onStart` now always receives a `null` estimate. `onProgress` estimates still come from the elapsed upload time.
+- Removed the `speed_test_dart` dependency, which held dependents on xml 6.
+
 ## [2.5.0] - Update http 1.0.0
 
 - Update to http 1.0.0

@@ -94,6 +94,7 @@ class _UploadPageState extends State<UploadPage> {
                               _client = TusClient(
                                 _file!,
                                 maxChunkSize: 512 * 1024 * 10,
+                                fingerprint: _file!.path,
                               );
 
                               print("Starting upload");
@@ -124,7 +125,6 @@ class _UploadPageState extends State<UploadPage> {
                                   'testHeaders': 'testHeaders',
                                   'testHeaders2': 'testHeaders2',
                                 },
-                                measureUploadSpeed: true,
                               );
                             },
                       child: Text("Upload"),
