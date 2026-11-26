@@ -42,9 +42,7 @@ final client = TusClient(
 // Starts the upload
 await client.upload(
     onStart:(TusClient client, Duration? estimate){
-        // If estimate is not null, it will provide the estimate time for completion
-        // it will only be not null if measuring upload speed
-        print('This is the client to be used $client and $estimate time');
+        print('This is the client to be used $client');
     },
     onComplete: () {
         print("Complete!");
@@ -55,9 +53,6 @@ await client.upload(
     onProgress: (double progress, Duration estimate, TusClient client) {
         print("Progress: $progress, Estimated time: ${estimate.inSeconds}");
     },
-
-    // Set this to true if you want to measure upload speed at the start of the upload
-    measureUploadSpeed: true,
 );
 ```
 

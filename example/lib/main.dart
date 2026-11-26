@@ -125,7 +125,6 @@ class _UploadPageState extends State<UploadPage> {
                                   'testHeaders': 'testHeaders',
                                   'testHeaders2': 'testHeaders2',
                                 },
-                                measureUploadSpeed: true,
                               );
                             },
                       child: Text("Upload"),
